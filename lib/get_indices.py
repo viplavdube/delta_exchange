@@ -2,9 +2,9 @@
 import requests
 
 
-def get_products():
+def get_indices():
 
-    url = "https://api.india.delta.exchange/v2/products"
+    url = "https://api.india.delta.exchange/v2/indices"
 
     payload={}
     headers = {}
@@ -13,4 +13,4 @@ def get_products():
     if response.status_code == 200:
         return response.json()
     else:
-        return {"error": "Failed to fetch products", "status_code": f"{response.status_code}"}
+        return {"error": "Failed to fetch indices", "status_code": f"{response.status_code}"}
